@@ -1,18 +1,17 @@
 {
-  "name": "nsi-rocks-core",
-  "private": true,
+  "name": "@arkhalabs/nsi-rocks-core",
+  "version": "0.1.0",
   "type": "module",
+  "private": false,
+  "main": "./nuxt.config.ts",
+  "files": ["nuxt.config.ts", "app", "server", "assets", "theme"],
   "scripts": {
-    "build": "nuxi build",
     "dev": "nuxi dev",
+    "build": "nuxi build",
     "generate": "nuxi generate",
     "preview": "nuxi preview",
-    "postinstall": "nuxi prepare"
+    "prepare": "nuxi prepare"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@10.10.0",
   "dependencies": {
     "@cloudflare/workers-types": "^4.20251001.0",
     "@iconify-json/lucide": "^1.2.68",
@@ -22,17 +21,27 @@
     "@nuxtjs/robots": "^5.5.5",
     "@nuxtjs/seo": "^3.2.2",
     "@nuxtjs/sitemap": "^7.4.7",
-    "drizzle-kit": "^0.31.5",
-    "drizzle-orm": "^0.44.6",
-    "eslint": "^9.36.0",
-    "nitro-cloudflare-dev": "^0.2.2",
-    "nuxt": "^4.1.2",
+    "nuxt-link-checker": "^3.0.0",
+    "nuxt-site-config": "^3.0.0",
     "rehype-katex": "^7.0.1",
     "remark-math": "^6.0.0",
     "tailwindcss": "^4.1.14",
-    "typescript": "^5.9.3",
+    "typescript": "^5.9.3"
+  },
+  "peerDependencies": {
+    "nuxt": "^4.1.2",
+    "vue": "^3.5.0",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "nuxt": "^4.1.2",
     "vue": "^3.5.22",
     "vue-router": "^4.5.1",
-    "wrangler": "^4.41.0"
-  }
+    "wrangler": "^4.41.0",
+    "drizzle-kit": "^0.31.5",
+    "drizzle-orm": "^0.44.6",
+    "eslint": "^9.36.0",
+    "nitro-cloudflare-dev": "^0.2.2"
+  },
+  "packageManager": "pnpm@10.10.0"
 }
