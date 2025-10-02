@@ -1,0 +1,19 @@
+{
+  "name": "arkhaiel",
+  "compatibility_date": "2025-09-27",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "arkhaiel",
+      "database_id": "f701ec07-4a26-45bb-b45c-413d5567b71f",
+      "migrations_dir": "drizzle/migrations",
+      "remote": true
+    }
+  ],
+  "routes": [
+    {
+      "pattern": "arkhaiel.dev",
+      "custom_domain": true
+    }
+  ]
+}
