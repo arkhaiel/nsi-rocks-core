@@ -1,6 +1,10 @@
+import { extendViteConfig, createResolver, useNuxt } from '@nuxt/kit'
+const { resolve } = createResolver(import.meta.url)
+
 export default defineNuxtConfig({
   compatibilityDate: '2025-10-02',
   modules: [
+    resolve('./modules/css'),
     '@nuxt/eslint',
     '@nuxt/ui',
     '@nuxtjs/seo',
@@ -13,6 +17,9 @@ export default defineNuxtConfig({
       sqliteConnector: 'native',
     },
   },
+  linkChecker: {
+    enabled: false
+  },
   nitro: {
     preset: 'cloudflare_module',
     cloudflare: {
@@ -20,7 +27,6 @@ export default defineNuxtConfig({
       nodeCompat: true,
     },
   },
-  css: ['~/assets/css/main.css'],
   app: {
     head: {
       link: [

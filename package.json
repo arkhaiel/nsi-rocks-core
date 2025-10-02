@@ -4,29 +4,35 @@
   "type": "module",
   "private": false,
   "main": "./nuxt.config.ts",
-  "files": ["nuxt.config.ts", "app", "server", "assets", "theme"],
+  "files": [
+    "nuxt.config.ts",
+    "app",
+    "server",
+    "assets",
+    "modules"
+  ],
   "scripts": {
     "dev": "nuxi dev",
     "build": "nuxi build",
     "generate": "nuxi generate",
-    "preview": "nuxi preview",
-    "prepare": "nuxi prepare"
+    "preview": "nuxi preview"
   },
   "dependencies": {
-    "@cloudflare/workers-types": "^4.20251001.0",
     "@iconify-json/lucide": "^1.2.68",
     "@nuxt/content": "^3.7.1",
-    "@nuxt/eslint": "^1.9.0",
+    "@nuxt/kit": "^4.1.2",
     "@nuxt/ui": "^4.0.1",
     "@nuxtjs/robots": "^5.5.5",
     "@nuxtjs/seo": "^3.2.2",
     "@nuxtjs/sitemap": "^7.4.7",
+    "exsolve": "^1.0.7",
     "nuxt-link-checker": "^3.0.0",
     "nuxt-site-config": "^3.0.0",
     "rehype-katex": "^7.0.1",
     "remark-math": "^6.0.0",
     "tailwindcss": "^4.1.14",
-    "typescript": "^5.9.3"
+    "@nuxt/eslint": "^1.9.0",
+    "ufo": "^1.6.1"
   },
   "peerDependencies": {
     "nuxt": "^4.1.2",
@@ -34,14 +40,13 @@
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
-    "nuxt": "^4.1.2",
-    "vue": "^3.5.22",
-    "vue-router": "^4.5.1",
-    "wrangler": "^4.41.0",
+    "@cloudflare/workers-types": "^4.20251001.0",
     "drizzle-kit": "^0.31.5",
     "drizzle-orm": "^0.44.6",
     "eslint": "^9.36.0",
-    "nitro-cloudflare-dev": "^0.2.2"
+    "nitro-cloudflare-dev": "^0.2.2",
+    "typescript": "^5.9.3",
+    "wrangler": "^4.41.0"
   },
   "packageManager": "pnpm@10.10.0"
 }
