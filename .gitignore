@@ -13,7 +13,7 @@ node_modules
 # Logs
 logs
 *.log
-
+*.tgz
 # Misc
 .DS_Store
 .fleet
