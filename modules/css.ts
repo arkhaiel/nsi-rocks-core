@@ -5,6 +5,7 @@ import { resolveModulePath } from 'exsolve'
 export default defineNuxtModule({
   meta: { name: 'css' },
   async setup(_options, nuxt) {
+    const dir = nuxt.options.rootDir
     const resolver = createResolver(import.meta.url)
 
     const contentDir = joinURL(dir, 'content')
@@ -15,16 +16,17 @@ export default defineNuxtModule({
     const cssTemplate = addTemplate({
       filename: 'nsi-core.css',
       getContents: () => {
-        return `@import "${tailwindPath}";
+        const content =  `@import "${tailwindPath}";
 @import "${uiPath}";
 
 @source "${contentDir.replace(/\\/g, '/')}/**/*";
 @source "${layerDir.replace(/\\/g, '/')}/**/*";
 @source "../../app.config.ts";`
+        console.info('CSS template content:\n', content)
+        return content
       }
     })
 
-    // injecte le CSS généré en premier
-    nuxt.options.css = [cssTemplate.dst, ...(nuxt.options.css || [])]
+    nuxt.options.css.unshift(cssTemplate.dst)
   }
 })
